@@ -11,6 +11,7 @@ using namespace std;
 int main() {
     short int opcao;
     vector<float> temperatura(3);
+    // Output the welcome message and the temperature scale options
     cout << "|-----------------------------------------------------|" << endl;
     cout << "| Bem vindo ao programa de Conversão de Temperaturas! |" << endl;
     cout << "| Escolha a escala de temperatura para ser convertida |" << endl;
@@ -19,8 +20,10 @@ int main() {
     cout << "| 3 - Fahrenheit                                      |" << endl;
     cout << "|-----------------------------------------------------|" << endl;
     cin >> opcao;
+    // Switch case to choose the temperature scale to be converted
     switch (opcao) {
         case 1:
+            // Ask the user to input the temperature in Celsius
             cout << "Digite a temperatura em Celsius: ";
             float celsius;
             cin >> celsius;
@@ -29,6 +32,7 @@ int main() {
             temperatura.at(2) = converterCelsiusParaKelvin(celsius);
             break;
         case 2:
+            // Ask the user to input the temperature in Kelvin
             cout << "Digite a temperatura em Kelvin: ";
             float kelvin;
             cin >> kelvin;
@@ -37,6 +41,7 @@ int main() {
             temperatura.at(1) = converterKelvinParaFahrenheit(kelvin);
             break;
         case 3:
+            // Ask the user to input the temperature in Fahrenheit
             cout << "Digite a temperatura em Fahrenheit: ";
             float fahrenheit;
             cin >> fahrenheit;
@@ -45,7 +50,7 @@ int main() {
             temperatura.at(2) = converterFahrenheitParaKelvin(fahrenheit);
             break;
     }
-
+    // Output the converted temperatures
     cout << "|-----------------------------------------------------|" << endl;
     cout << "| Temperatura em Celsius: " << temperatura.at(0) << "°C" << endl;
     cout << "| Temperatura em Fahrenheit: " << temperatura.at(1) << "°F" << endl;
@@ -54,9 +59,12 @@ int main() {
     cout << "Deseja converter outra temperatura? (S/N): ";
     string resposta;
     cin >> resposta;
+    // Ask if the user wants to convert another temperature
     if (resposta == "S" || resposta == "s") {
+        // Recursive call to main function if the user wants to convert another temperature
         main();
     } else {
+        // Exit the program if the user doesn't want to convert another temperature
         cout << "Obrigado por utilizar o programa de Conversão de Temperaturas!" << endl;
         return 0;
     }

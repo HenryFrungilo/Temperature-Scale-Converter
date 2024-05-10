@@ -5,6 +5,7 @@
 #ifndef TRABALHOBRITO_TEMPERATURA_H
 #define TRABALHOBRITO_TEMPERATURA_H
 
+// Functions prototypes declaration for temperature conversions between Celsius, Kelvin and Fahrenheit
 double converterCelsiusParaKelvin(double celsius);
 double converterCelsiusParaFahrenheit(double fahrenheit);
 double converterKelvinParaCelsius(double kelvin);
@@ -12,6 +13,7 @@ double converterKelvinParaFahrenheit(double kelvin);
 double converterFahrenheitParaCelsius(double fahrenheit);
 double converterFahrenheitParaKelvin(double fahrenheit);
 
+// Functions implementation for temperature conversions between Celsius, Kelvin and Fahrenheit
 double converterCelsiusParaKelvin(double celsius) {
     return celsius + 273.15;
 }
